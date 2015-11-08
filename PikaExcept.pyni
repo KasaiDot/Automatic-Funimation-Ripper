@@ -1,0 +1,105 @@
+﻿def PikaExceptions(inAR,inAA,inAL,inSH,inTI,inSN,inEN,inNN,inARs,inAAs,inALs,inSHs):
+	outAR = inAR
+	outAA = inAA
+	outAL = inAL
+	outSH = [AnimeRG]inSH[ScavvyKiD]
+	outTI = [AnimeRG]inTI[ScavvyKiD]
+	outSN = inSN
+	outEN = inEN
+	outNN = inNN
+	outARs = inARs
+	outAAs = inAAs
+	outALs = inALs
+	outSHs = inSHs
+	# Dont edit above
+	# inSH = the default show name 
+	# outSH = is What you want the show name to be
+	
+	# tags are AR = Artist
+	# tags are AA = Album Artist
+	# tags are AL = ALbum
+	# tags are SH = Show
+	# tags are TI = Title
+	# # for numbers these are raw ints so no '' when seting a val to out%tag%
+	# tags are SN = season num
+	# tags are EN = Episode num
+	# tags are NN = num in series (no seasons)
+	# # there are also Sortnames they are by default blank
+	# # are used by a trailing s
+	# tags with sort are AR,AA,AL,SH
+	if inSH == 'Fafner':
+		if inSN == 1:
+			outAA = 'Fafner: Dead Aggressor'
+			outSH = 'Fafner: Dead Aggressor'
+			outSHs = 'Fafner'
+		elif inSN == 0:
+			outTI = re.sub('^Fafner: ','Fafner: Movie 1: ',inTI)
+			outAA = 'Fafner: Heaven and Earth'
+			outAL = 'Fafner, Movie 1'
+			outALs = 'Fafner, Season 2'
+			outSH = 'Fafner: Heaven and Earth'
+			outSHs = 'Fafner'
+			outSN = 2
+			outEN = 0
+	if inSH == 'selector':
+		if inSN == 1:
+			outAA = 'selector infected WIXOSS'
+			outSH = 'selector infected WIXOSS'
+			outSHs = 'selector'
+		elif inSN == 2:
+			outTI = re.sub('^spread - ','',inTI)
+			outAA = 'selector spread WIXOSS'
+			outSH = 'selector spread WIXOSS'
+			outSHs = 'selector'
+	if inSH == 'One Piece':
+		if inSN == 1:
+			if inNN <= 26:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 1'
+			else:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 2'
+			None
+		elif inSN == 2:
+			if inNN <= 78:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 1'
+			elif inNN <= 103:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 2'
+			elif inNN <= 130:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 3'
+			else:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 4'
+		elif inSN == 3:
+			if inNN <= 156:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 1'
+			elif inNN <= 182:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 2'
+			else:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 3'
+		elif inSN == 4:
+			if inNN <= 229:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 1'
+			elif inNN <= 252:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 2'
+			else:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 3'
+		elif inSN == 5:
+			if inNN <= 275:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 1'
+			elif inNN <= 287:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 2'
+			elif inNN <= 299:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 3'
+			elif inNN <= 312:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 4'
+			elif inNN <= 324:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 5'
+			else:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 6'
+		elif inSN == 6:
+			if inNN <= 348:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 1'
+			elif inNN <= 360:
+				outAL = inSH+', Season '+str(inSN)+', Pt. 2'
+			else:
+				outAL = inSH+', Season '+str(inSN)
+	# Dont edit below
+	return outAR,outAA,outAL,outSH,outTI,outSN,outEN,outNN,outARs,outAAs,outALs,outSHs

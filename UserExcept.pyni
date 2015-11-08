@@ -1,0 +1,61 @@
+﻿def UserExceptions(inAR,inAA,inAL,inSH,inTI,inSN,inEN,inNN,inARs,inAAs,inALs,inSHs):
+	outAR = inAR
+	outAA = inAA
+	outAL = inAL
+	outSH = inSH
+	outTI = inTI
+	outSN = inSN
+	outEN = inEN
+	outNN = inNN
+	outARs = inARs
+	outAAs = inAAs
+	outALs = inALs
+	outSHs = inSHs
+	# Defently Dont edit above
+	# inSH = the default show name 
+	# outSH = is What you want the show name to be
+	
+	# tags are AR = Artist
+	# tags are AA = Album Artist
+	# tags are AL = ALbum
+	# tags are SH = Show
+	# tags are TI = Title
+	# # for numbers these are raw ints so no '' when seting a val to out%tag%
+	# tags are SN = season num
+	# tags are EN = Episode num
+	# tags are NN = num in series (no seasons)
+	# # there are also Sortnames they are by default blank
+	# # are used by a trailing s
+	# tags with sort are AR,AA,AL,SH
+	# # 2 ex. from PikaExcept
+	# if inSH == 'Fafner':
+		# if inSN == 1:
+			# outAA = 'Fafner: Dead Aggressor'
+			# outSH = 'Fafner: Dead Aggressor'
+			# outSHs = 'Fafner'
+		# elif inSN == 0:
+			# outTI = re.sub('^Fafner: ','Fafner: Movie 1: ',inTI)
+			# outAA = 'Fafner: Heaven and Earth'
+			# outAL = 'Fafner, Movie 1'
+			# outALs = 'Fafner, Season 2'
+			# outSH = 'Fafner: Heaven and Earth'
+			# outSHs = 'Fafner'
+			# outSN = 2
+			# outEN = 0
+	# if inSH == 'selector':
+		# if inSN == 1:
+			# outAA = 'selector infected WIXOSS'
+			# outSH = 'selector infected WIXOSS'
+			# outSHs = 'selector'
+		# elif inSN == 2:
+			# outTI = re.sub('^spread - ','',inTI)
+			# outAA = 'selector spread WIXOSS'
+			# outSH = 'selector spread WIXOSS'
+			# outSHs = 'selector'
+	# Dont edit above
+	
+	
+	
+	# Dont edit below
+	# Defently Dont edit below
+	return outAR,outAA,outAL,outSH,outTI,outSN,outEN,outNN,outARs,outAAs,outALs,outSHs
